@@ -1,41 +1,31 @@
-import media
-import fresh_tomatoes
+import media        # Import media to create instances of movie object
+import fresh_tomatoes       #Import fresh_tomatoes that will be used to display HTML of my favorite movies page
 
+"""Create instances of movie object for my favourite movies. This is represented with the title, story, image, trailer url, and director"""
 toy_story = media.Movie("Toy Story",
                         "A story of a boy and his toys that come to life",
                         "http://upload.wikimedia.org/wikipedia/en/1/13/Toy_Story.jpg",
-                        "https://www.youtube.com/watch?v=KYz2wyBy3kc")
-#print (toy_story.storyline)
+                        "https://www.youtube.com/watch?v=KYz2wyBy3kc",
+                        "John Lasseter")
 
 avatar = media.Movie("Avatar",
                      "A marine on an alien planet",
                      "https://upload.wikimedia.org/wikipedia/en/thumb/b/b0/Avatar-Teaser-Poster.jpg/220px-Avatar-Teaser-Poster.jpg",
-                     "https://www.youtube.com/watch?v=a0CDJZu4M5I")
-#print avatar.storyline
-#avatar.show_trailer()
+                     "https://www.youtube.com/watch?v=a0CDJZu4M5I",
+                     "James Cameron")
 
-school_of_rock = media.Movie("School of Rock",
-                             "Using rock music to learn",
-                             "https://upload.wikimedia.org/wikipedia/en/thumb/1/11/School_of_Rock_Poster.jpg/220px-School_of_Rock_Poster.jpg",
-                             "www.youtube.com/watch?v=XCwy6lW5Ixc")
-ratatouille = media.Movie("Ratatouille",
-                          "A rat is a chef in Paris",
-                          "https://upload.wikimedia.org/wikipedia/en/thumb/5/50/RatatouillePoster.jpg/220px-RatatouillePoster.jpg",
-                          "www.youtube.com/watch?v=c3sBBRxDAqk")
 
-midnight_in_paris = media.Movie("Midnight in Paris",
-                                "Going back in time to meet authors",
-                                "https://upload.wikimedia.org/wikipedia/en/thumb/9/9f/Midnight_in_Paris_Poster.jpg/215px-Midnight_in_Paris_Poster.jpg",
-                                "www.youtube.com/watch?v=BYRWfS2s2v4")
+the_shawshank_redemption = media.Movie("The Shawshank Redemption",
+                                "Perseverance against all odds",
+                                "https://upload.wikimedia.org/wikipedia/en/thumb/8/81/ShawshankRedemptionMoviePoster.jpg/220px-ShawshankRedemptionMoviePoster.jpg",
+                                "www.youtube.com/watch?v=6hB3S9bIaco",
+                                "Frank Darabont")
 
-hunger_games = media.Movie("Hunger Games",
-                           "A really real reality show",
-                           "https://upload.wikimedia.org/wikipedia/en/thumb/a/ab/Hunger_games.jpg/220px-Hunger_games.jpg",
-                           "www.youtube.com/watch?v=4S9a5V9ODuY")
+city_of_god = media.Movie("City of God",
+                           "Young criminals in Rio",
+                           "https://upload.wikimedia.org/wikipedia/en/thumb/1/10/CidadedeDeus.jpg/220px-CidadedeDeus.jpg",
+                           "www.youtube.com/watch?v=ioUE_5wpg_E",
+                           "Fernando Meirelles & Katia Lund")
 
-movies = [toy_story,avatar,school_of_rock,ratatouille,midnight_in_paris,hunger_games]
-#fresh_tomatoes.open_movies_page(movies)
-#print media.Movie.__module__
-#print media.Movie.__name___
-#print media.Movie.__dict__
-#print media.Movie.__doc__
+movies = [toy_story,avatar,the_shawshank_redemption,city_of_god]        # Store the movie instances in a list
+fresh_tomatoes.open_movies_page(movies)     # Create HTML file output and display on default browser
